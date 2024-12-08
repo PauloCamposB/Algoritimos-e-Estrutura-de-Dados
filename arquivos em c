@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <string.h>
+
+void adicionar_aluno(FILE *arquivo);
+
+int main() {
+
+    FILE *arquivo;
+
+    char nome[100];
+
+    arquivo = fopen("aluno.txt", "w");
+
+
+    printf("\nDigite o nome do aluno:\n");
+    fgets(nome,100,stdin);
+
+
+    fprintf(arquivo, "\nNome: %s\n",nome);
+
+
+    fclose(arquivo);
+
+    printf("\nArquivo criado com sucesso!\n");
+
+   adicionar_aluno(arquivo);
+
+
+
+
+}
+
+
+void adicionar_aluno(FILE *arquivo){
+    char aluno[100];
+    int cont = 1;
+
+    fopen("aluno.txt","a");
+    if( arquivo == NULL){
+        printf("ERRO ao abrir o arquivo");
+        return;
+    }
+
+    while(cont){
+
+    printf("\nDigite o nome do novo aluno (digite 'fim' caso queira sair):");
+    fgets(aluno,100,stdin);
+     aluno[strcspn(aluno, "\n")] = '\0';
+
+     if (strcmp(aluno, "fim") == 0) {
+        cont = 0;
+
+     }else {
+      fprintf(arquivo, "Nome: %s\n", aluno);
+     }
+
+    }
+
+    fclose(arquivo);
+
+
+}

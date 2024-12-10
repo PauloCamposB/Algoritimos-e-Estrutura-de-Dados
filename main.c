@@ -3,8 +3,8 @@
 #include "ingrediente.h"
 
 int main() {
-    Pizza cardapio[100];  // Array para armazenar até 100 pizzas
-    Ingrediente ingredientes[50];  // Array para armazenar até 50 ingredientes
+    Pizza cardapio[100];  // Array para armazenar atÃ© 100 pizzas
+    Ingrediente ingredientes[50];  // Array para armazenar atÃ© 50 ingredientes
     int qtd_pizzas = 0, qtd_ingredientes = 0;
 
     // Carrega dados dos arquivos ao iniciar
@@ -84,7 +84,7 @@ void venderPizza(Pizza *cardapio, int qtd_pizzas, Ingrediente *ingredientes, int
     int encontrado = 0;
 
     if (qtd_pizzas == 0) {
-        printf("Nenhuma pizza disponível para venda.\n");
+        printf("Nenhuma pizza disponÃ­vel para venda.\n");
         return;
     }
 
@@ -95,13 +95,13 @@ void venderPizza(Pizza *cardapio, int qtd_pizzas, Ingrediente *ingredientes, int
         if (cardapio[i].id == id_pizza) {
             encontrado = 1;
             preco_final = cardapio[i].preco;
-            printf("Pizza selecionada: %s (Preço Base: %.2f)\n", cardapio[i].nome, cardapio[i].preco);
+            printf("Pizza selecionada: %s (PreÃ§o Base: %.2f)\n", cardapio[i].nome, cardapio[i].preco);
             break;
         }
     }
 
     if (!encontrado) {
-        printf("Pizza com ID %d não encontrada.\n", id_pizza);
+        printf("Pizza com ID %d nÃ£o encontrada.\n", id_pizza);
         return;
     }
 
@@ -123,10 +123,10 @@ void venderPizza(Pizza *cardapio, int qtd_pizzas, Ingrediente *ingredientes, int
         }
 
         if (!encontrado) {
-            printf("Ingrediente com ID %d não encontrado.\n", id_extra);
+            printf("Ingrediente com ID %d nÃ£o encontrado.\n", id_extra);
         }
     }
 
-    printf("Venda concluída! Preço final: %.2f\n", preco_final);
+    printf("Venda concluida! Preco final: %.2f\n", preco_final);
 }
 

@@ -64,13 +64,10 @@ int parse_game(const char *line, Game *game) {
     int idx = 0;
     int campo_atual = 0;
 
-    
     while (*p != '\0') {
         idx = 0;
         
-       
         while (*p == ' ') p++;
-        
         
         if (*p == '"') {
             p++; 

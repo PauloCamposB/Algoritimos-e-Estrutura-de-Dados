@@ -54,8 +54,8 @@ public class binaria{
 
             boolean encontrado = buscaBinariaPorNome(lista, nomeBusca);
 
-            if (encontrado) System.out.println("SIM");
-            else System.out.println("NAO");
+            if (encontrado) System.out.println(" SIM");
+            else System.out.println(" NAO");
         }
 
         long fimTempo = System.nanoTime();
@@ -88,8 +88,9 @@ public class binaria{
             else fim = meio - 1;
         }
         return false;
-    }
-}
+      }
+   }
+
     
 
 class Game{

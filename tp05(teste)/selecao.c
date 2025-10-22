@@ -178,3 +178,59 @@ int main(){
     free(selecionados);
     return 0;
 }
+
+
+
+
+//-------------------------------------------------------
+
+#include <stdio.h> 
+#include <stdlib.h>
+#include <stdbool.h> 
+
+
+typedef struct No{
+	int elemento;
+	struct No* esq, dir;
+}No;
+
+No* raiz = NULL;
+
+void inserir(int x){
+	inserir_na_arvore(x,raiz);
+}
+
+void newRaiz(int x){
+	No* i = (No*) malloc(sizeof(No));
+	i->elemento = x;
+	i->dir = i 
+	esq = NULL;
+}
+
+No* inserir_na_arvore(int x, No* i){
+	if(raiz == NULL){
+		raiz = newRaiz(x);	
+	}else if(x > raiz->elemento){
+		inserir(x,dir);
+	}else{
+		inserir(x,esq);
+	}
+}
+
+No* inserir_na_arvore(int x, No* i){
+        if(raiz == NULL){
+                raiz = newRaiz(x);
+        }else if(x > raiz->elemento){
+                inserir(x,dir);
+        }else{
+                inserir(x,esq);
+        }
+
+        return i;
+
+}
+
+
+int main (){
+return 0;
+} 
